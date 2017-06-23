@@ -1,0 +1,24 @@
+<html>
+  <style>
+	body{
+	  font-size: 15pt;
+	  font-family: arial;
+	}
+  </style>
+
+
+<body><center>
+  <h2>Battle History</h2>
+  {% for battles in battle_records %}
+    <p>You have {{battles['status']}} against {{battles['npc_name']}}.</p>
+  {% endfor %}
+  <form action="/selectparty">
+	<input type="submit" value="Select a new party" />
+</form>
+  <form action="/result">
+    <input type="submit" value="Battle some more" /></form>
+    </center>
+</body>
+
+
+</html>

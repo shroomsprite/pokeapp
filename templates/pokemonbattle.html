@@ -1,0 +1,29 @@
+<html>
+  <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body><center>
+  {% for pokemon in poke %}
+    <p>{{username['player_name']}}'s Pokemon {{pokemon['pokemon_name']}} used {{pokemon['skills']}}</p>
+
+  {% endfor %}
+  {% for pokemon in wild_poke %}
+  <p>Enemy Pokemon {{pokemon['pokemon_name']}} used {{pokemon['skills']}}</p>
+  <p>{{username['player_name']}} {{battle_stat}} against {{pokemon['pokemon_name']}}!</p>
+
+  {% endfor %}
+  <form action="/selectparty">
+    <input type="submit" value="Select a new party" /></form>
+  <form action="/result">
+    <input type="submit" value="Battle some more" /></form>
+
+</center>
+</body>
+
+
+</html>

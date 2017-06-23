@@ -1,0 +1,47 @@
+<html>
+     <style>
+    body{ 
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+  <h2>Pokemon</h2>
+  <p> id,   name,   type,      level, power, attack</p>
+<table>
+{% for p in pokemon %}
+    <tr>
+    {% for i in p %}
+        <td>{{ i }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+ </table>
+  <form action="/">
+    <input type="submit" value="Go back" /></form>
+ <br><br>
+   <h2>NPCs</h2>
+<table>
+{% for n in npc %}
+    <tr>
+    {% for i in n %}
+        <td>{{ i }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+ </table>
+  <form action="/">
+    <input type="submit" value="Go back" /></form>
+ <br><br>
+   <h2>Locations</h2>
+<table>
+{% for l in locations %}
+    <tr>
+    {% for i in l %}
+        <td>{{ i }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+ </table>
+   <form action="/">
+    <input type="submit" value="Go back" /></form>
+</html>
